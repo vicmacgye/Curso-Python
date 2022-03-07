@@ -1,0 +1,41 @@
+def conversor1(tipo_divisas, valor_dólares):
+    pesosydirhams = input("¡Hola! ¿Cuántos " + tipo_divisas + " quieres convertir?:")
+    pesosydirhams = float(pesosydirhams)
+    valor_dólares = valor_dólares
+    dólares = pesosydirhams / valor_dólares
+    dólares = round(dólares, 2)
+    dólares = str(dólares)
+    print("Tienes $ " + dólares + " " + "dólares")
+
+def conversor2(tipo_divisas, valor_dólares):
+    euros = input("¡Hola! ¿Cuántos " + tipo_divisas + " quieres convertir?:")
+    euros = float(euros)
+    valor_dólares = valor_dólares
+    dólares = euros * valor_dólares
+    dólares = round(dólares, 2)
+    dólares = str(dólares)
+    print("Tienes $ " + dólares + " " + "dólares")
+
+menu = """"
+
+Convierte tus dólares en diferentes divisas.
+
+1 - Euros
+2 - Pesos Mexicanos
+3 - Pesos Colombianos
+4 - Dirhams
+
+Elige una opción: """
+
+opcion = input(menu)
+
+if opcion == "1":
+    conversor2("euros", 1.09334)
+elif opcion == "2":
+     conversor1("pesos mexicanos", 20.9264)
+elif opcion == "3":
+    conversor1("pesos colombianos", 3811.08)
+elif opcion == "4":
+    conversor1("dirhams", 3.67235)
+else:
+    print("Ingresa una opción correcta por favor")
